@@ -8,13 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
-    //options.AddPolicy("MyCors", builder =>
-    //{
-    //    builder.AllowAnyOrigin()
-    //           .AllowAnyHeader()
-    //           .AllowAnyMethod();
-    //});
-    options.AddDefaultPolicy(builder =>
+    options.AddPolicy("MyCors", builder =>
     {
         builder.AllowAnyOrigin()
                .AllowAnyHeader()
@@ -40,7 +34,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-//app.UseCors("MyCors");
-app.UseCors();
+app.UseCors("MyCors");
 app.MapControllers();
 app.Run();
