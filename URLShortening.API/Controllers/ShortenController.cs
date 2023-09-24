@@ -8,6 +8,7 @@ using URLShortening.API.Request;
 using URLShortening.DAL;
 using URLShortening.DAL.Entity;
 using URLShortening.Service;
+using URLShortening.Service.Exceptions;
 
 namespace URLShortening.API.Controllers
 {
@@ -51,6 +52,11 @@ namespace URLShortening.API.Controllers
             try
             {
                 _service.CheckUrl(request.URL);
+
+                var shortUrlEntity = _service.IsURLExistFromShortUrl(request.URL).Result;
+
+                if (shortUrlEntity != null)
+                    throw new UrlValidationException("This url is already shortened. The short url is: " + shortUrlEntity.ShortUrl);
 
                 var code = request.CustomUrlShortCode;
 

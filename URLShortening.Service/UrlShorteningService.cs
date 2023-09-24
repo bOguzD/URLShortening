@@ -4,6 +4,7 @@ using URLShortening.DAL;
 using Microsoft.EntityFrameworkCore;
 using System;
 using URLShortening.Service.Exceptions;
+using URLShortening.DAL.Entity;
 
 namespace URLShortening.Service
 {
@@ -35,9 +36,9 @@ namespace URLShortening.Service
             }
         }
 
-        public async Task<bool> IsURLExistFromShortUrl(string url)
+        public async Task<ShortenedUrl> IsURLExistFromShortUrl(string url)
         {
-            return await _context.ShortenedUrl.AnyAsync(x => x.LongUrl == url);
+            return await _context.ShortenedUrl.FirstOrDefaultAsync(x => x.LongUrl == url);
             
         }
 

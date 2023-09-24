@@ -73,3 +73,25 @@ Hata Durumu
 # Database
 
 Database olarak SQLite kullanýlmýþtýr.
+
+
+# Request Örneði GetUrl
+
+	https://localhost:44348/api/Shorten/GetUrl?ShortUrl=http://gaming.amazon/Ix9vB2
+
+# Request Örneði CreateShortUrl
+
+	https://localhost:44348/api/Shorten/CreateShortUrl
+	{
+		"URL": "https://gaming.amazon.com/home"
+	}
+
+
+# Response Örneði CreateShortUrl
+
+	{
+		"shortUrl": "http://gaming.amazon/cxY8cU",
+		"message": "Short URL created successfully."
+	}
+
+
