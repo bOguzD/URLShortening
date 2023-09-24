@@ -5,9 +5,14 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "URLShortening.API", "URLShortening.API\URLShortening.API.csproj", "{93CB932F-33DC-4804-AA9E-B2706E4824F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "URLShortening.DAL", "URLShortening.DAL\URLShortening.DAL.csproj", "{BA0CFEC9-0AC0-4EA7-A97C-E770A974F4F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "URLShortening.DAL", "URLShortening.DAL\URLShortening.DAL.csproj", "{BA0CFEC9-0AC0-4EA7-A97C-E770A974F4F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "URLShortening.Service", "URLShortening.Service\URLShortening.Service.csproj", "{6AF3AA16-3EF1-486A-B9F0-83432D929F65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "URLShortening.Service", "URLShortening.Service\URLShortening.Service.csproj", "{6AF3AA16-3EF1-486A-B9F0-83432D929F65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9EF7B93B-622B-4A90-89F3-3E04207A5D91}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
